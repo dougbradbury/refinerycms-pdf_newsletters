@@ -1,0 +1,45 @@
+<% content_for :body_content_title do %>
+  <%= @newsletter.volume %>
+<% end %>
+
+<% content_for :body_content_left do %>
+  <section>
+    <h1>Publish On</h1>
+    <p>
+      <%=raw @newsletter.publish_on %>
+    </p>
+  </section>
+  <section>
+    <h1>Pdf</h1>
+    <p>
+      <%= link_to 'pdf', @newsletter.pdf.url %>
+    </p>
+  </section>
+  <section>
+    <h1>Volume</h1>
+    <p>
+      <%=raw @newsletter.volume %>
+    </p>
+  </section>
+  <section>
+    <h1>Issue</h1>
+    <p>
+      <%=raw @newsletter.issue %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="newsletters">
+      <% @newsletters.each do |newsletter| %>
+        <li>
+          <%= link_to newsletter.volume, newsletter_path(newsletter) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

@@ -1,0 +1,25 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    newsletters:
+      title: Newsletters
+  admin:
+    newsletters:
+      actions:
+        create_new: Créer un(e) nouve(au/l/lle) Newsletter
+        reorder: Réordonner les Newsletters
+        reorder_done: Fin de réordonnancement des Newsletters
+      records:
+        title: Newsletters
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucun(e) Newsletter. Cliquer sur "Créer un(e) nouve(au/l/lle) Newsletter" pour créer votre premi(er/ère) newsletter.'
+      newsletter:
+        view_live_html: Voir ce(t/tte) newsletter <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier ce(t/tte) newsletter
+        delete: Supprimer définitivement ce(t/tte) newsletter
+  newsletters:
+    show:
+      other: Autres Newsletters
