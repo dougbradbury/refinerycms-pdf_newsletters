@@ -1,6 +1,6 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(newsletter) -%>">
   <span class='title'>
-    <%= newsletter.volume %>
+    <%= "Volume #{newsletter.volume}, Issue #{newsletter.issue} - #{newsletter.month} #{newsletter.year}" %>
     <span class="preview">&nbsp;</span>
   </span>
   <span class='actions'>

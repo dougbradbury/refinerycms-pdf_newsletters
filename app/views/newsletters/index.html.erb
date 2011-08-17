@@ -1,8 +1,10 @@
 <% content_for :body_content_left do %>
+  <h2>Current Issue</h2>
+  <%= render :partial => 'newsletter', :object => @newsletters.current %>
   <ul id="newsletters">
     <% @newsletters.each do |newsletter| %>
       <li>
-        <%= link_to newsletter.volume, newsletter_path(newsletter) %>
+        <%= render :partial => 'newsletter', :collection => @newsletters%>
       </li>
     <% end %>
   </ul>
