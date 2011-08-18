@@ -2,7 +2,7 @@
 This Refinery CMS engine is appropriate for a month newsletter published in a pdf format.
 ## Installation
     gem install refinerycms-pdf-newsletter
-    rails generate refinerycms_pdf-newsletters
+    rails generate refinerycms_pdf_newsletters
 
 ## How to build this engine as a gem
 
