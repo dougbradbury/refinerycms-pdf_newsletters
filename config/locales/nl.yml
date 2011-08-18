@@ -1,21 +1,21 @@
 nl:
   plugins:
-    newsletters:
-      title: Newsletters
+    pdf_newsletters:
+      title: Pdf Newsletters
   admin:
-    newsletters:
+    pdf_newsletters:
       actions:
-        create_new: Maak een nieuwe Newsletter
-        reorder: Wijzig de volgorde van de Newsletters
-        reorder_done: Klaar met het wijzingen van de volgorde van de Newsletters
+        create_new: Maak een nieuwe Pdf Newsletter
+        reorder: Wijzig de volgorde van de Pdf Newsletters
+        reorder_done: Klaar met het wijzingen van de volgorde van de Pdf Newsletters
       records:
-        title: Newsletters
+        title: Pdf Newsletters
         sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-        no_items_yet: Er zijn nog geen Newsletters. Druk op 'Maak een nieuwe Newsletter' om de eerste aan te maken.
-      newsletter:
-        view_live_html: Bekijk deze newsletter op de website <br/><em>(opent een nieuw venster)</em>
-        edit: Bewerk deze newsletter
-        delete: Verwijder deze newsletter voor eeuwig
-  newsletters:
+        no_items_yet: Er zijn nog geen Pdf Newsletters. Druk op 'Maak een nieuwe Pdf Newsletter' om de eerste aan te maken.
+      pdf_newsletter:
+        view_live_html: Bekijk deze pdf newsletter op de website <br/><em>(opent een nieuw venster)</em>
+        edit: Bewerk deze pdf newsletter
+        delete: Verwijder deze pdf newsletter voor eeuwig
+  pdf_newsletters:
     show:
-      other: Andere Newsletters
+      other: Andere Pdf Newsletters

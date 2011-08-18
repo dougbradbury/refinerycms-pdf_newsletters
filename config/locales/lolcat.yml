@@ -4,22 +4,22 @@ lolcat:
       image_picker:
         image: IMAGE
   plugins:
-    newsletters:
-      title: Newsletters
+    pdf_newsletters:
+      title: Pdf Newsletters
   admin:
-    newsletters:
+    pdf_newsletters:
       actions:
-        create_new: CREATE NEW Newsletter
-        reorder: REORDR Newsletters
-        reorder_done: DUN REORDERIN Newsletters
+        create_new: CREATE NEW Pdf Newsletter
+        reorder: REORDR Pdf Newsletters
+        reorder_done: DUN REORDERIN Pdf Newsletters
       records:
-        title: Newsletters
+        title: Pdf Newsletters
         sorry_no_results: SRY! THAR R NO RESULTS FINDZ.
-        no_items_yet: THAR R NO Newsletters YET. CLICK "CREATE NEW Newsletter" 2 ADD UR FURST newsletter.
-      newsletter:
-        view_live_html: VIEW DIS newsletter LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
-        edit: EDIT DIS newsletter
-        delete: REMOOV DIS newsletter FOREVR
-  newsletters:
+        no_items_yet: THAR R NO Pdf Newsletters YET. CLICK "CREATE NEW Pdf Newsletter" 2 ADD UR FURST pdf newsletter.
+      pdf_newsletter:
+        view_live_html: VIEW DIS pdf newsletter LIV <BR/><EM>(OPENS IN NEW WINDOW)</EM>
+        edit: EDIT DIS pdf newsletter
+        delete: REMOOV DIS pdf newsletter FOREVR
+  pdf_newsletters:
     show:
-      other: OTHR Newsletters
+      other: OTHR Pdf Newsletters

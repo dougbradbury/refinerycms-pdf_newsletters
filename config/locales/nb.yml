@@ -1,21 +1,21 @@
 nb:
   plugins:
-    newsletters:
-      title: Newsletters
+    pdf_newsletters:
+      title: Pdf Newsletters
   admin:
-    newsletters:
+    pdf_newsletters:
       actions:
-        create_new: Lag en ny Newsletter
-        reorder: Endre rekkefølgen på Newsletters
-        reorder_done: Ferdig å endre rekkefølgen Newsletters
+        create_new: Lag en ny Pdf Newsletter
+        reorder: Endre rekkefølgen på Pdf Newsletters
+        reorder_done: Ferdig å endre rekkefølgen Pdf Newsletters
       records:
-        title: Newsletters
+        title: Pdf Newsletters
         sorry_no_results: Beklager! Vi fant ikke noen resultater.
-        no_items_yet: Det er ingen Newsletters enda. Klikk på "Lag en ny Newsletter" for å legge til din første newsletter.
-      newsletter:
-        view_live_html: Vis hvordan denne newsletter ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
-        edit: Rediger denne newsletter
-        delete: Fjern denne newsletter permanent
-  newsletters:
+        no_items_yet: Det er ingen Pdf Newsletters enda. Klikk på "Lag en ny Pdf Newsletter" for å legge til din første pdf newsletter.
+      pdf_newsletter:
+        view_live_html: Vis hvordan denne pdf newsletter ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+        edit: Rediger denne pdf newsletter
+        delete: Fjern denne pdf newsletter permanent
+  pdf_newsletters:
     show:
-      other: Andre Newsletters
+      other: Andre Pdf Newsletters

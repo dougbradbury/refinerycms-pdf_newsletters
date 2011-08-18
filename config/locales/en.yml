@@ -4,22 +4,22 @@ en:
       image_picker:
         image: image
   plugins:
-    newsletters:
-      title: Newsletters
+    pdf_newsletters:
+      title: Pdf Newsletters
   admin:
-    newsletters:
+    pdf_newsletters:
       actions:
-        create_new: Add New Newsletter
-        reorder: Reorder Newsletters
-        reorder_done: Done Reordering Newsletters
+        create_new: Add New Pdf Newsletter
+        reorder: Reorder Pdf Newsletters
+        reorder_done: Done Reordering Pdf Newsletters
       records:
-        title: Newsletters
+        title: Pdf Newsletters
         sorry_no_results: Sorry! There are no results found.
-        no_items_yet: There are no Newsletters yet. Click "Add New Newsletter" to add your first newsletter.
-      newsletter:
-        view_live_html: View this newsletter live <br/><em>(opens in a new window)</em>
-        edit: Edit this newsletter
-        delete: Remove this newsletter forever
-  newsletters:
+        no_items_yet: There are no Pdf Newsletters yet. Click "Add New Pdf Newsletter" to add your first pdf newsletter.
+      pdf_newsletter:
+        view_live_html: View this pdf newsletter live <br/><em>(opens in a new window)</em>
+        edit: Edit this pdf newsletter
+        delete: Remove this pdf newsletter forever
+  pdf_newsletters:
     show:
-      other: Other Newsletters
+      other: Other Pdf Newsletters
