@@ -8,5 +8,5 @@ Gem::Specification.new do |s|
   s.require_paths     = %w(lib)
   s.files             = Dir['lib/**/*', 'config/**/*', 'app/**/*', 'db/**/*']
   s.authors           = "Doug Bradbury <doug@8thlight.com>"
-  s.homepage          = "https://github.com/dougbradbury/refinerycms-newsletters"
+  s.homepage          = "https://github.com/dougbradbury/refinerycms-pdf_newsletters"
 end
