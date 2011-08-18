@@ -1,5 +1,6 @@
 class PdfNewslettersController < ApplicationController
 
+  helper :pdf_newsletters
   before_filter :find_all_newsletters
   before_filter :find_page
 

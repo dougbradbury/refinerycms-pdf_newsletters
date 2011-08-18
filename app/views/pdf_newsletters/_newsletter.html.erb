@@ -1,2 +1,1 @@
-<%= link_to "Volume #{newsletter.volume}, Issue #{newsletter.issue} - #{newsletter.month} #{newsletter.year}",
-newsletter.pdf.url %>
+<%= link_to newsletter_description(newsletter), newsletter.pdf.url %>
