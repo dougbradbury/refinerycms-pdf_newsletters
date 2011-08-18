@@ -1,19 +1,43 @@
-<%= form_for [:admin, @pdf_newsletter] do |f| -%>
+<%= form_for [:admin, @newsletter] do |f| -%>
   <%= render :partial => "/shared/admin/error_messages", :locals => {
-          :object => @pdf_newsletter,
+          :object => @newsletter,
           :include_object_name => true
         } %>
-  
+
   <div class='field'>
-    <%= f.label :title -%>
-    <%= f.text_field :title, :class => 'larger widest'  -%>
+    <%= f.label :publish_on -%>
+    <%= f.date_select :publish_on  -%>
   </div>
-  
+
+  <div class='field'>
+    <%= f.label :pdf -%>
+    <%= render :partial => "/shared/admin/resource_picker", :locals => {
+          :f => f,
+          :field => :pdf_id,
+          :resource => @newsletter.pdf,
+        } %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :volume -%>
+    <%= f.text_field :volume  -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :issue -%>
+    <%= f.text_field :issue  -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :editor -%>
+    <%= f.text_field :editor  -%>
+  </div>
+
   <%= render :partial => "/shared/admin/form_actions",
               :locals => {
                 :f => f,
                 :continue_editing => false,
                 :delete_title => t('delete', :scope => 'admin.pdf_newsletters.pdf_newsletter'),
-                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @pdf_newsletter.title)
+                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @newsletter.volume)
               } %>
 <% end -%>
