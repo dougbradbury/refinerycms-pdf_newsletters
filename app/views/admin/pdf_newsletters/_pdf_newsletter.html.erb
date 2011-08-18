@@ -12,7 +12,7 @@
     <%= link_to refinery_icon_tag("delete.png"), admin_pdf_newsletter_path(pdf_newsletter),
         :class => "cancel confirm-delete",
         :title => t('.delete'),
-        :confirm => t('message', :scope => 'shared.admin.delete', :title => pdf_newsletter.title),
+        :confirm => t('message', :scope => 'shared.admin.delete', :title => "Volume #{pdf_newsletter.volume} Issue #{pdf_newsletter.issue}"),
         :method => :delete %>
   </span>
 </li>
