@@ -17,7 +17,7 @@ module Refinery
 
       config.after_initialize do
         Refinery::Plugin.register do |plugin|
-          plugin.name = "newsletters"
+          plugin.name = "pdf-newsletters"
           plugin.pathname = root
           plugin.activity = {
             :class => Newsletter,
