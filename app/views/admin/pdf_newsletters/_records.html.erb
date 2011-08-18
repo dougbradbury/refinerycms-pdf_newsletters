@@ -1,9 +1,9 @@
 <% if searching? %>
   <h2><%= t('results_for', :scope => 'shared.admin.search', :query => params[:search]) %></h2>
 <% end %>
-<% if @newsletters.any? %>
+<% if @pdf_newsletters.any? %>
   <div class='pagination_container'>
-    <%= render :partial => 'newsletters' %>
+    <%= render :partial => 'pdf_newsletters' %>
   </div>
 <% else %>
   <p>

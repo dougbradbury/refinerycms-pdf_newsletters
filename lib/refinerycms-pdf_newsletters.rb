@@ -2,14 +2,6 @@ require 'refinerycms-base'
 
 module Refinery
   module PdfNewsletters
-
-    class << self
-      attr_accessor :root
-      def root
-        @root ||= Pathname.new(File.expand_path('../../', __FILE__))
-      end
-    end
-
     class Engine < Rails::Engine
       initializer "static assets" do |app|
         app.middleware.insert_after ::ActionDispatch::Static, ::ActionDispatch::Static, "#{root}/public"
@@ -18,10 +10,8 @@ module Refinery
       config.after_initialize do
         Refinery::Plugin.register do |plugin|
           plugin.name = "pdf_newsletters"
-          plugin.pathname = root
           plugin.activity = {
-            :class => PdfNewsletter,
-            :title => 'volume'
+            :class => PdfNewsletter
           }
         end
       end

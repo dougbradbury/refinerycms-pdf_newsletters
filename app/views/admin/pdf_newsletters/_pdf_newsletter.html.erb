@@ -1,0 +1,18 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(pdf_newsletter) -%>">
+  <span class='title'>
+    <%= "Volume #{pdf_newsletter.volume}, Issue #{pdf_newsletter.issue} - #{pdf_newsletter.month} #{pdf_newsletter.year}" %>
+    <span class="preview">&nbsp;</span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag("application_go.png"), pdf_newsletter_path(pdf_newsletter),
+        :title => t('.view_live_html'),
+        :target => "_blank" %>
+    <%= link_to refinery_icon_tag("application_edit.png"), edit_admin_pdf_newsletter_path(pdf_newsletter),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), admin_pdf_newsletter_path(pdf_newsletter),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'shared.admin.delete', :title => pdf_newsletter.title),
+        :method => :delete %>
+  </span>
+</li>
