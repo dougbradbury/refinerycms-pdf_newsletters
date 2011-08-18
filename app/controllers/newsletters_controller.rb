@@ -20,7 +20,7 @@ class NewslettersController < ApplicationController
 protected
 
   def find_all_newsletters
-    @newsletters = Newsletter.order('position ASC')
+    @newsletters = Newsletter.recent
   end
 
   def find_page

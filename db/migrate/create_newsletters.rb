@@ -7,6 +7,7 @@ class CreateNewsletters < ActiveRecord::Migration
       t.string :volume
       t.string :issue
       t.integer :position
+      t.string :editor
 
       t.timestamps
     end

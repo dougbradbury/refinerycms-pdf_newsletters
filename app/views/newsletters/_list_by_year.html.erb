@@ -1,0 +1,17 @@
+<% newsletters_list = newsletters%>
+<% newsletter = newsletters_list.shift %>
+<% while newsletter.present? %>
+  <h1 class="title"><%=newsletter.year-%></h1>
+  <% unless newsletter.editor.blank? %> 
+    <p>(By Editor <%=newsletter.editor%>)</p>
+  <% end %>
+  <% @year = newsletter.year %>
+  <ul id="newsletters">
+    <%while newsletter && newsletter.year == @year%>
+      <li>
+        <%= render :partial => 'newsletter', :object => newsletter %>
+      </li>
+      <% newsletter = newsletters_list.shift %>
+    <% end %>
+  </ul>
+<% end %>
