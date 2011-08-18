@@ -5,11 +5,17 @@ describe Newsletter do
   def reset_newsletter(options = {})
     @valid_attributes = {
       :id => 1,
-      :volume => "RSpec is great for testing too"
+      :volume => "Test Volume",
+      :issue => "Test Issue",
+      :pdf => mock_model(Resource)
     }
 
     @newsletter.destroy! if @newsletter
     @newsletter = Newsletter.create!(@valid_attributes.update(options))
+  end
+
+  def create_newsletter(publish_on)
+    Newsletter.create!(@valid_attributes.merge(:publish_on => publish_on))
   end
 
   before(:each) do
@@ -18,13 +24,8 @@ describe Newsletter do
 
   context "validations" do
 
-    it "rejects empty volume" do
-      Newsletter.new(@valid_attributes.merge(:volume => "")).should_not be_valid
-    end
-
-    it "rejects non unique volume" do
-      # as one gets created before each spec by reset_newsletter
-      Newsletter.new(@valid_attributes).should_not be_valid
+    it "rejects empty pdf" do
+      Newsletter.new(@valid_attributes.merge(:pdf => nil)).should_not be_valid
     end
 
   end
@@ -36,13 +37,16 @@ describe Newsletter do
   end
 
   it "has current newsletter" do
-    Newsletter.create!(@valid_attributes.merge(:publish_on => Time.zone.now + 1.days, :volume => "zero"))
-    latest =Newsletter.create!(@valid_attributes.merge(:publish_on => Time.zone.now - 3.hours, :volume => "one"))
-    Newsletter.create!(@valid_attributes.merge(:publish_on => Time.zone.now - 1.month, :volume => "two"))
-    Newsletter.create!(@valid_attributes.merge(:publish_on => Time.zone.now - 1.year, :volume => "three"))
+    future = create_newsletter(Time.zone.now + 1.days)
+    one_month_ago = create_newsletter(Time.zone.now - 1.month)
+    latest = create_newsletter(Time.zone.now - 3.hours)
+    one_year_ago = create_newsletter(Time.zone.now - 1.year)
 
-    puts Newsletter.find(:all).inspect
     Newsletter.published.count.should == 3
     Newsletter.current.id.should == latest.id
+    Newsletter.recent.first.id.should == latest.id
+    Newsletter.recent[1].id.should == one_month_ago.id
+    Newsletter.recent[2].id.should == one_year_ago.id
   end
+
 end

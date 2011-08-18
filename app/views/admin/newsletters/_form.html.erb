@@ -3,12 +3,12 @@
           :object => @newsletter,
           :include_object_name => true
         } %>
-  
+
   <div class='field'>
     <%= f.label :publish_on -%>
     <%= f.date_select :publish_on  -%>
   </div>
-  
+
   <div class='field'>
     <%= f.label :pdf -%>
     <%= render :partial => "/shared/admin/resource_picker", :locals => {
@@ -17,17 +17,22 @@
           :resource => @newsletter.pdf,
         } %>
   </div>
-  
+
   <div class='field'>
     <%= f.label :volume -%>
     <%= f.text_field :volume  -%>
   </div>
-  
+
   <div class='field'>
     <%= f.label :issue -%>
     <%= f.text_field :issue  -%>
   </div>
-  
+
+  <div class='field'>
+    <%= f.label :editor -%>
+    <%= f.text_field :editor  -%>
+  </div>
+
   <%= render :partial => "/shared/admin/form_actions",
               :locals => {
                 :f => f,

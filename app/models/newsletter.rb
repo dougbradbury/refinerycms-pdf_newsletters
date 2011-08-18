@@ -2,7 +2,9 @@ class Newsletter < ActiveRecord::Base
 
   acts_as_indexed :fields => [:volume, :issue]
 
-  validates :volume, :presence => true, :uniqueness => true
+  validates :volume, :presence => true
+  validates :issue, :presence => true
+  validates :pdf, :presence => true
 
   belongs_to :pdf, :class_name => 'Resource'
 
@@ -13,7 +15,7 @@ class Newsletter < ActiveRecord::Base
   def year
     self.publish_on.year
   end
-  scope :published, lambda { 
+  scope :published, lambda {
     where("newsletters.publish_on IS NOT NULL AND newsletters.publish_on <= ?", Time.zone.now)
   }
 

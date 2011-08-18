@@ -1,13 +1,5 @@
 <% content_for :body_content_left do %>
-  <h2>Current Issue</h2>
-  <%= render :partial => 'newsletter', :object => @newsletters.current %>
-  <ul id="newsletters">
-    <% @newsletters.each do |newsletter| %>
-      <li>
-        <%= render :partial => 'newsletter', :collection => @newsletters%>
-      </li>
-    <% end %>
-  </ul>
+<%= render :partial => 'list_by_year', :locals => {:newsletters => @newsletters} %>
 <% end %>
 
 <%= render :partial => "/shared/content_page" %>
