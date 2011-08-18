@@ -7,4 +7,4 @@
 <%= render :partial => '/shared/admin/make_sortable',
             :locals => {
               :tree => false
-            } if !searching? and Admin::NewslettersController.sortable? and Newsletter.count > 1 %>
+            } if !searching? and Admin::PdfNewslettersController.sortable? and PdfNewsletter.count > 1 %>

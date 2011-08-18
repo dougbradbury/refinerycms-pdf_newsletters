@@ -1,6 +1,6 @@
 namespace :refinery do
 
-  namespace :newsletters do
+  namespace :pdf_newsletters do
 
     # call this task my running: rake refinery:newsletters:my_task
     # desc "Description of my task below"

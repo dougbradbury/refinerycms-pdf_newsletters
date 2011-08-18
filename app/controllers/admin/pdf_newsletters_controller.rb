@@ -1,8 +1,8 @@
 module Admin
-  class NewslettersController < Admin::BaseController
+  class PdfNewslettersController < Admin::BaseController
 
-    crudify :newsletter,
-            :title_attribute => 'volume', :xhr_paging => true
+    crudify :pdf_newsletter,
+            :title_attribute => 'publish_on', :xhr_paging => true
 
   end
 end

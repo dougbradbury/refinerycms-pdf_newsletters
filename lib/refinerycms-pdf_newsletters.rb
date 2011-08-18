@@ -1,7 +1,7 @@
 require 'refinerycms-base'
 
 module Refinery
-  module Newsletters
+  module PdfNewsletters
 
     class << self
       attr_accessor :root
@@ -20,7 +20,7 @@ module Refinery
           plugin.name = "pdf_newsletters"
           plugin.pathname = root
           plugin.activity = {
-            :class => Newsletter,
+            :class => PdfNewsletter,
             :title => 'volume'
           }
         end

@@ -1,4 +1,4 @@
-class Newsletter < ActiveRecord::Base
+class PdfNewsletter < ActiveRecord::Base
 
   acts_as_indexed :fields => [:volume, :issue]
 
@@ -16,10 +16,10 @@ class Newsletter < ActiveRecord::Base
     self.publish_on.year
   end
   scope :published, lambda {
-    where("newsletters.publish_on IS NOT NULL AND newsletters.publish_on <= ?", Time.zone.now)
+    where("pdf_newsletters.publish_on IS NOT NULL AND pdf_newsletters.publish_on <= ?", Time.zone.now)
   }
 
-  scope :recent, published.order("newsletters.publish_on DESC")
+  scope :recent, published.order("pdf_newsletters.publish_on DESC")
 
   def self.current
    self.recent.first

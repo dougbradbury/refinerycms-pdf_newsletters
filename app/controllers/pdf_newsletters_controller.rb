@@ -1,4 +1,4 @@
-class NewslettersController < ApplicationController
+class PdfNewslettersController < ApplicationController
 
   before_filter :find_all_newsletters
   before_filter :find_page
@@ -10,7 +10,7 @@ class NewslettersController < ApplicationController
   end
 
   def show
-    @newsletter = Newsletter.find(params[:id])
+    @newsletter = PdfNewsletter.find(params[:id])
 
     # you can use meta fields from your model instead (e.g. browser_title)
     # by swapping @page for @newsletter in the line below:
@@ -20,11 +20,11 @@ class NewslettersController < ApplicationController
 protected
 
   def find_all_newsletters
-    @newsletters = Newsletter.recent
+    @newsletters = PdfNewsletter.recent
   end
 
   def find_page
-    @page = Page.where(:link_url => "/newsletters").first
+    @page = Page.where(:link_url => "/pdf_newsletters").first
   end
 
 end
