@@ -1,6 +1,6 @@
-<%= form_for [:admin, @newsletter] do |f| -%>
+<%= form_for [:admin, @pdf_newsletter] do |f| -%>
   <%= render :partial => "/shared/admin/error_messages", :locals => {
-          :object => @newsletter,
+          :object => @pdf_newsletter,
           :include_object_name => true
         } %>
 
@@ -14,7 +14,7 @@
     <%= render :partial => "/shared/admin/resource_picker", :locals => {
           :f => f,
           :field => :pdf_id,
-          :resource => @newsletter.pdf,
+          :resource => @pdf_newsletter.pdf,
         } %>
   </div>
 
@@ -38,6 +38,6 @@
                 :f => f,
                 :continue_editing => false,
                 :delete_title => t('delete', :scope => 'admin.pdf_newsletters.pdf_newsletter'),
-                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @newsletter.volume)
+                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @pdf_newsletter.volume)
               } %>
 <% end -%>
