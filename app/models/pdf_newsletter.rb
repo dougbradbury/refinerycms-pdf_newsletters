@@ -8,6 +8,10 @@ class PdfNewsletter < ActiveRecord::Base
 
   belongs_to :pdf, :class_name => 'Resource'
 
+  def title
+    "#{month} Newsletter"
+  end
+
   def month
     self.publish_on.strftime("%B")
   end
@@ -23,5 +27,9 @@ class PdfNewsletter < ActiveRecord::Base
 
   def self.current
    self.recent.first
+  end
+
+  def self.whats_new?
+    true
   end
 end
